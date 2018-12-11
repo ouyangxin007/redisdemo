@@ -14,17 +14,28 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/getUser")
-    public User getUser(){
-		User user = userService.getUser("testuser");
+    public User getUser(String id){
+		User user = userService.getUser(id);
 		return user;
     }
 	
 	@RequestMapping("/deleteUser")
-	public String deleteUser(){
-		userService.deleteUser("testuser");
+	public String deleteUser(String id){
+		userService.deleteUser(id);
 		return "执行删除";
 	}
-	
+
+	@RequestMapping("/putUser")
+	public User putUser(String id){
+		User user = userService.putUser(id);
+		return user;
+	}
+
+	@RequestMapping("/getUserNokey")
+	public User getUserNokey(String id){
+		User user = userService.getUserNokey(id);
+		return user;
+	}
 	
 
 }
