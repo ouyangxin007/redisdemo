@@ -1,4 +1,4 @@
-package test.controller;
+package cn.com.taiji.redis.test.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

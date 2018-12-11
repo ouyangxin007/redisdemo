@@ -1,7 +1,8 @@
-package test.serviceImpl;
+package cn.com.taiji.redis.test.serviceImpl;
 
-import com.redis.test.model.User;
-import com.redis.test.service.UserService;
+
+import cn.com.taiji.redis.test.model.User;
+import cn.com.taiji.redis.test.service.UserService;
 import org.springframework.stereotype.Service;
 
 @Service

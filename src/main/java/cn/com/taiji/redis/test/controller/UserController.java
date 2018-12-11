@@ -1,7 +1,8 @@
-package test.controller;
+package cn.com.taiji.redis.test.controller;
 
-import com.redis.test.model.User;
-import com.redis.test.service.UserService;
+
+import cn.com.taiji.redis.test.model.User;
+import cn.com.taiji.redis.test.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package test.model;
+package cn.com.taiji.redis.test.model;
 
 import java.io.Serializable;
 

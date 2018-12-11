@@ -1,4 +1,4 @@
-package test.conf;
+package cn.com.taiji.redis.test.conf;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CachingConfigurerSupport;

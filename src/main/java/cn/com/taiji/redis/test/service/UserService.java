@@ -1,6 +1,7 @@
-package test.service;
+package cn.com.taiji.redis.test.service;
 
-import com.redis.test.model.User;
+
+import cn.com.taiji.redis.test.model.User;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 
