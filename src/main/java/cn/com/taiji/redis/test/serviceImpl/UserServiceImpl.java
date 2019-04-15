@@ -19,7 +19,28 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public void deleteUser(String id) {
+	public User getUserChangeAge(String id,String age) {
+		System.out.println(id+"进入实现类获取数据！");
+		User user = new User();
+		user.setId(id);
+		user.setName("testuser");
+		user.setAge(Integer.valueOf(age));
+		return user;
+	}
+
+	@Override
+	public User getUserChangeAgeInside(String id,String age) {
+		deleteUser(Integer.valueOf(id));
+		System.out.println(id+"进入实现类获取数据！");
+		User user = new User();
+		user.setId(id);
+		user.setName("testuser");
+		user.setAge(Integer.valueOf(age));
+		return user;
+	}
+
+	@Override
+	public void deleteUser(int id) {
 		System.out.println(id+"进入实现类删除数据！");
 	}
 

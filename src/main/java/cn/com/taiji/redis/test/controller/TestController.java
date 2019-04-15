@@ -29,7 +29,13 @@ public class TestController {
     	if(!template.hasKey("testkey")){
     		return "key不存在，请先保存数据";
     	}else{
-    		String testkey = template.opsForValue().get("testkey");//根据key获取缓存中的val
+			//根据key获取缓存中的val
+
+			/*
+			*
+			*
+			* */
+    		String testkey = template.opsForValue().get("testkey");
     		return "获取到缓存中的数据：testkey="+testkey;
     	}
     }
