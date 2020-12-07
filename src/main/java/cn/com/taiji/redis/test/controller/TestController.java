@@ -5,6 +5,8 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 
 @RestController
 public class TestController {
@@ -16,6 +18,7 @@ public class TestController {
     public String setValue(){
     	if(!template.hasKey("testkey")){
     		template.opsForValue().append("testkey", "testvalue");
+			template.opsForValue().set("timeOutKey", "timeOut", 10, TimeUnit.SECONDS);
     		return "使用redis缓存保存数据成功";
     	}else{
     		template.delete("testkey");

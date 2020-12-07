@@ -34,17 +34,17 @@ public class UserController {
 	}
 
 	@RequestMapping("/getUserNokey")
-	public User getUserNokey(String id){
-		User user = userService.getUserNokey(id);
+	public User getUserNokey(String id,String age){
+		User user = userService.getUserNokey(id,age);
 		return user;
 	}
 
-//	@RequestMapping("/changeUser")
-//	public User changeUser(String id,String age){
-//		userService.deleteUser(Integer.valueOf(id));
-//		User user = userService.getUserChangeAge(id,age);
-//		return user;
-//	}
+	@RequestMapping("/changeUser")
+	public User changeUser(String id,String age){
+		userService.deleteUser(Integer.valueOf(id));
+		User user = userService.getUserChangeAge(id,age);
+		return user;
+	}
 
 	@RequestMapping("/changeUserInside")
 	public User changeUserInside(String id,String age){
